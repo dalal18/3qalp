@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071525" />
+    <meta name="description" content="مختبر تفاعلي ثلاثي الأبعاد لمقارنة قلوب السمكة والضفدع والتمساح." />
+    <title>مختبر القلوب ثلاثي الأبعاد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap');
+:root{--bg:#06111f;--bg-2:#091a2c;--panel:#0b2035;--panel-2:#0d2740;--line:rgba(139,203,244,.19);--line-strong:rgba(139,203,244,.35);--text:#e5f4ff;--muted:#8ca8bb;--cyan:#8bd7ff;--cyan-2:#45b5eb;--red:#fa7488;--orange:#ffae87;--blue:#5cbdff;--green:#7ce1c3;--shadow:0 22px 70px rgba(0,0,0,.34)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 72% 7%,#102e49 0,transparent 32rem),radial-gradient(circle at 18% 55%,#0b243c 0,transparent 28rem),var(--bg);color:var(--text);font-family:'Tajawal',system-ui,sans-serif;line-height:1.6}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(rgba(130,190,225,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(130,190,225,.055) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,black,transparent 80%)}button,input{font:inherit}.app-shell{position:relative;max-width:1440px;margin:auto;padding:0 5.4vw 40px;overflow:hidden}.ambient{position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.12;pointer-events:none}.ambient-one{background:#45b5eb;left:-180px;top:380px}.ambient-two{background:#ff6784;right:-160px;top:880px}.topbar{height:92px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}.brand{display:flex;gap:13px;align-items:center;color:var(--text);text-decoration:none}.brand strong{display:block;font-size:17px;letter-spacing:-.4px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.4px}.brand-mark{width:35px;height:35px;border:1px solid var(--cyan-2);border-radius:11px 11px 15px 15px;display:flex;align-items:center;justify-content:center;gap:2px;transform:rotate(45deg);box-shadow:0 0 25px rgba(69,181,235,.26)}.brand-mark span{width:6px;height:13px;background:var(--cyan);border-radius:8px;display:block}.brand-mark span:last-child{height:18px;background:var(--red)}.top-meta{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:11px;letter-spacing:.4px}.meta-divider{width:1px;height:17px;background:var(--line-strong)}.direction-tag{color:var(--cyan)}.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(124,225,195,.1),0 0 16px rgba(124,225,195,.7)}.intro-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.5fr);gap:70px;padding:92px 0 72px;align-items:end}.eyebrow,.section-index,.note-kicker,.muted-label{color:var(--cyan);font-size:11px;font-weight:700;letter-spacing:1.4px}.eyebrow{display:flex;gap:11px;align-items:center}.eyebrow-line{display:block;width:38px;height:1px;background:var(--cyan)}h1{font-size:clamp(50px,7.2vw,100px);line-height:.97;letter-spacing:-4px;margin:22px 0 24px;font-weight:800}h1 em{color:var(--cyan);font-style:normal;text-shadow:0 0 35px rgba(139,215,255,.18)}.intro-lede{max-width:450px;color:#adc5d5;font-size:16px;margin:0}.intro-stats{display:flex;gap:38px;margin-top:42px}.intro-stats div{display:flex;flex-direction:column;gap:1px}.intro-stats strong{font-size:24px;color:var(--text);letter-spacing:-1px}.intro-stats span{font-size:11px;color:var(--muted)}.intro-note{border-right:1px solid var(--cyan-2);padding:7px 26px 8px 0;align-self:center}.note-kicker{display:block;margin-bottom:18px}.intro-note ol{list-style:none;padding:0;margin:0;display:grid;gap:14px}.intro-note li{display:flex;align-items:center;gap:13px;font-size:13px;color:#c5d6e0}.intro-note b{font-size:10px;font-family:ui-monospace,monospace;color:var(--cyan);letter-spacing:1px}.animal-switcher{border:1px solid var(--line);background:rgba(11,32,53,.72);min-height:90px;border-radius:7px 7px 0 0;display:grid;grid-template-columns:160px 1fr 125px;align-items:stretch}.switcher-label{display:flex;align-items:center;gap:10px;padding:0 22px;color:var(--muted);font-size:12px;border-left:1px solid var(--line)}.tiny-grid{width:15px;height:15px;background:linear-gradient(90deg,var(--cyan) 1px,transparent 1px),linear-gradient(var(--cyan) 1px,transparent 1px);background-size:6px 6px;opacity:.7}.animal-tabs{display:flex;align-items:stretch}.animal-tab{position:relative;display:flex;align-items:center;gap:12px;flex:1;min-width:0;padding:16px 18px;border:0;border-left:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;text-align:right;transition:.25s}.animal-tab:hover{background:rgba(69,181,235,.07);color:var(--text)}.animal-tab.active{background:linear-gradient(90deg,rgba(69,181,235,.13),transparent);color:var(--text)}.animal-tab.active:after{content:"";position:absolute;bottom:-1px;right:0;left:0;height:2px;background:var(--cyan)}.animal-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line-strong);color:var(--cyan);font-size:19px}.animal-tab span:nth-child(2){font-weight:700;font-size:14px}.animal-tab small{color:var(--muted);font-size:10px;display:block;margin-right:auto}.sample-code{padding:0 16px;display:flex;align-items:center;justify-content:center;gap:9px;font-family:ui-monospace,monospace;font-size:10px;color:var(--muted);white-space:nowrap}.sample-code b{color:var(--cyan);font-weight:500}.sample-pulse{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red)}.workspace-grid{display:grid;grid-template-columns:minmax(0,1.68fr) minmax(300px,.72fr);gap:14px;margin-top:14px}.panel{background:linear-gradient(145deg,rgba(13,39,64,.94),rgba(7,23,39,.96));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:6px;position:relative}.panel-heading{display:flex;justify-content:space-between;align-items:flex-start}.panel-heading h2{margin:5px 0 0;font-size:21px;letter-spacing:-.6px}.stage-heading{padding:25px 27px 18px}.stage-tools{display:flex;align-items:center;gap:13px}.mode-badge{font-size:10px;color:var(--cyan);display:flex;align-items:center;gap:7px;background:rgba(139,215,255,.08);padding:7px 10px;border:1px solid rgba(139,215,255,.14)}.badge-dot{width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 9px var(--cyan)}.icon-button{border:1px solid var(--line);background:transparent;color:var(--muted);width:31px;height:31px;border-radius:4px;cursor:pointer;font-size:20px;line-height:1;transition:.2s}.icon-button:hover{color:var(--cyan);border-color:var(--cyan)}.stage-canvas{position:relative;min-height:560px;margin:0 14px 14px;border:1px solid rgba(120,185,225,.15);overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(20,68,94,.42),transparent 37%),linear-gradient(120deg,#081625,#091d30);perspective:850px}.stage-canvas:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(141,218,255,.05) 50%,transparent 61%);transform:translateX(-90%);animation:scan 11s ease-in-out infinite}.scanline{position:absolute;top:17%;bottom:17%;width:1px;right:21%;background:linear-gradient(transparent,var(--cyan),transparent);opacity:.22}.orbit{position:absolute;border:1px solid rgba(139,215,255,.16);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%) rotate(67deg)}.orbit-a{width:72%;height:33%}.orbit-b{width:80%;height:48%;transform:translate(-50%,-50%) rotate(-20deg);opacity:.47}.model-wrap{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d}.model-shell{width:min(74%,500px);transform:rotateX(0deg) rotateY(0deg);transform-style:preserve-3d;transition:transform .15s ease-out;cursor:grab;filter:drop-shadow(0 35px 25px rgba(0,0,0,.42))}.model-shell:active{cursor:grabbing}.model-shell svg{width:100%;height:auto;overflow:visible}.heart-main{filter:url(#softGlow);transition:transform .35s,opacity .35s}.heart-part{cursor:pointer;transition:filter .2s,opacity .2s,stroke-width .2s}.heart-part:hover,.heart-part.selected{filter:url(#softGlow);stroke:#b9edff;stroke-width:4px}.heart-part.hidden{opacity:.25}.chamber{fill:url(#chamberGrad);stroke:rgba(139,215,255,.8);stroke-width:2.3;opacity:.94;transition:opacity .35s}.external-vessel{fill:none;stroke:url(#vesselGrad);stroke-linecap:round;stroke-linejoin:round}.vessel-a{stroke-width:22}.vessel-b{stroke-width:15}.vessel-c{stroke-width:10}.chamber-label{font-family:'Tajawal';font-size:12px;fill:#bfeaff;pointer-events:none;text-anchor:middle;opacity:.9}.flow-path{fill:none;stroke-linecap:round;stroke-width:4;opacity:.32}.flow-path.oxygen{stroke:var(--orange)}.flow-path.deoxygen{stroke:var(--blue)}.blood-particle{filter:url(#softGlow)}.axis-label{position:absolute;color:rgba(139,215,255,.35);font:10px ui-monospace,monospace}.axis-x{left:15px;bottom:15px}.axis-y{left:15px;top:15px}.stage-caption{position:absolute;bottom:17px;right:18px;display:flex;align-items:center;gap:9px;color:var(--muted);font-size:10px}.crosshair{width:9px;height:9px;border:1px solid var(--cyan);display:inline-block;transform:rotate(45deg)}.drag-hint{position:absolute;bottom:17px;left:18px;color:var(--muted);font-size:10px;direction:rtl}.mouse-icon{color:var(--cyan);font-size:16px;margin-left:5px}.internal-toggle{position:absolute;top:18px;left:18px;display:flex;align-items:center;gap:8px;font-size:10px;color:var(--muted)}.toggle{width:34px;height:18px;border-radius:20px;border:1px solid var(--line-strong);background:#0a1726;padding:2px;cursor:pointer}.toggle span{display:block;width:12px;height:12px;border-radius:50%;background:var(--muted);transition:.2s}.toggle.on{border-color:var(--cyan);background:rgba(69,181,235,.16)}.toggle.on span{transform:translateX(15px);background:var(--cyan);box-shadow:0 0 10px var(--cyan)}.stage-footer{display:flex;align-items:center;justify-content:space-between;padding:0 27px 21px;color:var(--muted);font-size:10px}.legend{display:flex;gap:17px}.legend span{display:flex;align-items:center;gap:6px}.legend-dot,.table-animal-dot{display:inline-block;width:7px;height:7px;border-radius:50%}.oxygen{background:var(--orange);box-shadow:0 0 8px var(--orange)}.deoxygen{background:var(--blue);box-shadow:0 0 8px var(--blue)}.coordinate-readout{display:flex;gap:10px;direction:rtl}.coordinate-readout b{font-family:ui-monospace,monospace;color:var(--cyan);font-weight:500;direction:ltr}.inspector-column{display:flex;flex-direction:column;gap:14px}.inspector-panel{padding:25px 24px 23px;min-height:303px}.signal-bars{display:flex;align-items:end;gap:3px;padding-top:5px}.signal-bars i{width:3px;background:var(--cyan);display:block}.signal-bars i:nth-child(1){height:7px;opacity:.45}.signal-bars i:nth-child(2){height:11px;opacity:.7}.signal-bars i:nth-child(3){height:15px}.inspector-intro{display:flex;align-items:center;gap:12px;margin:31px 0 13px}.target-ring{width:38px;height:38px;border:1px solid var(--cyan);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font-size:22px;box-shadow:0 0 22px rgba(139,215,255,.12)}.muted-label{font-size:9px;letter-spacing:1px;color:var(--muted)}.inspector-intro h3{margin:1px 0 0;font-size:25px;letter-spacing:-.8px}.inspector-panel p{font-size:12px;color:#a9c1d1;line-height:1.9;margin:0 0 20px}.part-meta{display:flex;align-items:center;gap:9px;font-size:10px;color:var(--cyan)}.meta-line{height:1px;width:22px;background:var(--line-strong)}.text-action{border:0;border-top:1px solid var(--line);background:transparent;color:var(--text);width:100%;text-align:right;margin-top:20px;padding:14px 0 0;font-size:11px;cursor:pointer;display:flex;justify-content:space-between;transition:.2s}.text-action:hover{color:var(--cyan)}.text-action span{font-size:19px;color:var(--cyan)}.pump-panel{padding:23px 24px 21px;overflow:hidden}.pump-top{display:flex;justify-content:space-between;align-items:flex-start}.state-label{font-size:10px;color:var(--muted);border:1px solid var(--line);padding:4px 8px}.state-label.running{color:var(--green);border-color:rgba(124,225,195,.4)}.pump-visual{height:118px;position:relative;display:grid;place-items:center;margin:2px 0}.pulse-ring{position:absolute;border:1px solid rgba(250,116,136,.55);border-radius:50%;width:60px;height:60px}.ring-one{animation:heartbeat 1.7s ease-in-out infinite}.ring-two{width:100px;height:100px;opacity:.35;animation:heartbeat 1.7s ease-in-out .12s infinite}.pump-heart{font-size:45px;color:var(--red);line-height:1;text-shadow:0 0 20px rgba(250,116,136,.7);animation:heartbeat 1.7s ease-in-out infinite;z-index:1}.bpm{position:absolute;bottom:2px;font-family:ui-monospace,monospace;color:var(--text);font-size:14px}.bpm small{font-family:'Tajawal';font-size:9px;color:var(--muted);margin-right:4px}.pump-button{height:46px;width:100%;border:1px solid var(--cyan);background:var(--cyan);color:#082136;border-radius:3px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;box-shadow:0 8px 25px rgba(69,181,235,.18);transition:.2s}.pump-button:hover{background:#b3e8ff;box-shadow:0 8px 34px rgba(69,181,235,.3)}.pump-button.running{background:transparent;color:var(--cyan);box-shadow:none}.pump-icon{font-size:10px}.pump-button.running .pump-icon{font-size:15px}.pump-button kbd{font:10px ui-monospace,monospace;opacity:.55;margin-right:auto;padding-left:10px}.speed-row{display:flex;align-items:center;gap:9px;margin-top:17px;color:var(--muted);font-size:10px}.speed-row input{accent-color:var(--cyan);flex:1;height:2px}.speed-row span:last-child{color:var(--cyan);font-family:ui-monospace,monospace}.flow-section{margin-top:14px;padding:26px 28px 28px}.flow-heading p,.comparison-heading p{margin:5px 0 0;color:var(--muted);font-size:11px}.flow-heading p strong{color:var(--cyan);font-weight:600}.flow-live{display:flex;align-items:center;gap:8px;color:var(--green);font-size:10px;padding-top:5px}.flow-track{display:flex;align-items:flex-start;gap:0;margin-top:30px;overflow:auto;padding-bottom:3px}.flow-node{position:relative;min-width:135px;flex:1;padding-left:20px}.flow-node:not(:last-child):after{content:"";position:absolute;top:17px;right:0;left:-1px;height:1px;background:linear-gradient(90deg,rgba(139,215,255,.45),transparent)}.flow-node:last-child{min-width:105px}.node-marker{width:34px;height:34px;border:1px solid var(--line-strong);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font:11px ui-monospace,monospace;background:#0a2033;position:relative;z-index:1}.flow-node.active .node-marker{border-color:var(--orange);color:var(--orange);box-shadow:0 0 17px rgba(255,174,135,.22)}.node-title{font-size:12px;color:var(--text);margin-top:10px;font-weight:700}.node-sub{font-size:9px;color:var(--muted);margin-top:2px}.comparison-section{margin-top:14px;padding:26px 28px 30px}.comparison-mark{font:10px ui-monospace,monospace;color:var(--muted);padding-top:7px}.comparison-table-wrap{overflow:auto;margin-top:28px}.comparison-table{border-collapse:collapse;width:100%;min-width:680px;font-size:12px}.comparison-table th,.comparison-table td{border:1px solid var(--line);padding:14px 15px;text-align:right}.comparison-table thead th{background:rgba(69,181,235,.1);color:var(--cyan);font-weight:700;font-size:12px}.comparison-table thead th:first-child{color:var(--muted);width:27%}.comparison-table tbody th{color:#a5bece;font-weight:600;background:rgba(4,16,28,.28)}.comparison-table tbody td{color:#d5e6ee}.table-animal-dot{margin-left:7px}.fish-dot{background:var(--cyan)}.frog-dot{background:var(--green)}.croc-dot{background:var(--orange)}.table-pill{font-size:10px;padding:4px 8px;border-radius:2px}.table-pill.low{color:var(--cyan);background:rgba(139,215,255,.09)}.table-pill.mid{color:var(--orange);background:rgba(255,174,135,.1)}.table-pill.clear{color:var(--green);background:rgba(124,225,195,.09)}.footer{display:flex;justify-content:space-between;margin-top:23px;padding:18px 4px 0;border-top:1px solid var(--line);color:var(--muted);font-size:10px}.footer span:last-child{color:var(--cyan)}
+@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.09)}16%{transform:scale(1)}24%{transform:scale(1.05)}33%{transform:scale(1)} }@keyframes scan{0%,35%{transform:translateX(-90%)}65%,100%{transform:translateX(90%)}}.pumping .stage-canvas:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(250,116,136,.08),transparent 30%);animation:stagePulse 1.7s ease-in-out infinite}.pumping .model-shell{animation:modelBeat 1.7s ease-in-out infinite}.pumping .blood-particle{opacity:1}.pumping .flow-path{opacity:.8}@keyframes modelBeat{0%,100%{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(1)}8%{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(1.035)}16%{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(1)}24%{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(1.02)}33%{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(1)}}@keyframes stagePulse{0%,100%{opacity:0}10%,24%{opacity:1}40%{opacity:0}}
+@media (max-width:980px){.app-shell{padding:0 4vw 30px}.intro-grid{gap:36px;padding:68px 0 52px}.workspace-grid{grid-template-columns:1fr}.inspector-column{display:grid;grid-template-columns:1fr 1fr}.stage-canvas{min-height:500px}.animal-switcher{grid-template-columns:125px 1fr 98px}.animal-tab{padding:12px 10px;gap:7px}.animal-tab small{display:none}.animal-icon{width:25px;height:25px}.sample-code{font-size:9px}}
+@media (max-width:640px){.topbar{height:76px}.top-meta{font-size:0}.top-meta .direction-tag{font-size:10px}.meta-divider{display:none}.intro-grid{display:block;padding:58px 0 43px}.intro-note{margin-top:38px;padding-right:18px}.intro-stats{gap:22px;margin-top:32px}.intro-stats strong{font-size:20px}.animal-switcher{display:block}.switcher-label{height:42px;border-left:0;border-bottom:1px solid var(--line);padding:0 15px}.animal-tabs{min-height:73px}.animal-tab{justify-content:center;flex-wrap:wrap;padding:9px 4px;gap:5px}.animal-tab span:nth-child(2){font-size:12px}.animal-icon{display:none}.sample-code{height:32px;border-top:1px solid var(--line)}.stage-heading{padding:20px 16px 14px}.stage-heading h2,.panel-heading h2{font-size:18px}.mode-badge{font-size:9px}.stage-canvas{min-height:430px;margin:0 9px 9px}.model-shell{width:91%}.stage-footer{padding:0 16px 16px;display:block}.coordinate-readout{margin-top:10px}.inspector-column{display:flex}.inspector-panel,.pump-panel{padding:20px 18px}.flow-section,.comparison-section{padding:21px 16px 22px}.flow-track{margin-top:22px}.flow-node{min-width:120px}.comparison-mark{display:none}.footer{font-size:9px}.footer span:last-child{display:none}h1{font-size:58px;letter-spacing:-3px}}
+
+</style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="مختبر القلوب">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+          <span><strong>مَخْبَر القلوب</strong><small>نبضة تشرح الحياة</small></span>
+        </a>
+        <div class="top-meta">
+          <span class="live-dot"></span>
+          <span>وحدة التعلم 03</span>
+          <span class="meta-divider"></span>
+          <span class="direction-tag">الدورة الدموية</span>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="intro-grid">
+          <div class="intro-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span>استوديو التشريح المقارن</div>
+            <h1>اكتشف القلب<br /><em>من الداخل.</em></h1>
+            <p class="intro-lede">لفّ النموذج، اختر جزءًا، ثم شاهد الدم وهو يعبر الحجرات في نبضة واحدة.</p>
+            <div class="intro-stats" aria-label="ملخص المختبر">
+              <div><strong>03</strong><span>نماذج قلب</span></div>
+              <div><strong>06</strong><span>مفاهيم للمقارنة</span></div>
+              <div><strong>360°</strong><span>استكشاف بصري</span></div>
+            </div>
+          </div>
+          <div class="intro-note">
+            <span class="note-kicker">كيف تستخدم المختبر؟</span>
+            <ol>
+              <li><b>01</b><span>اختر الحيوان من الشريط.</span></li>
+              <li><b>02</b><span>اسحب النموذج للتدوير.</span></li>
+              <li><b>03</b><span>اضغط على «ضخ» لتتبع الدم.</span></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="animal-switcher" aria-label="اختيار الحيوان">
+          <div class="switcher-label"><span class="tiny-grid"></span><span>اختر العينة</span></div>
+          <div class="animal-tabs" role="tablist">
+            <button class="animal-tab active" data-animal="frog" role="tab" aria-selected="true"><span class="animal-icon">◉</span><span>الضفدع</span><small>قلب بثلاث حجرات</small></button>
+            <button class="animal-tab" data-animal="crocodile" role="tab" aria-selected="false"><span class="animal-icon">◈</span><span>التمساح</span><small>قلب بأربع حجرات</small></button>
+          </div>
+          <div class="sample-code"><span class="sample-pulse"></span>عينة حيّة <b id="sampleCode">F-02</b></div>
+        </section>
+
+        <section class="workspace-grid">
+          <div class="lab-stage panel">
+            <div class="panel-heading stage-heading">
+              <div><span class="section-index">01 /</span><h2>مسرح التشريح</h2></div>
+              <div class="stage-tools">
+                <span id="modeBadge" class="mode-badge"><span class="badge-dot"></span>منظر خارجي</span>
+                <button class="icon-button" id="resetView" title="إعادة زاوية العرض" aria-label="إعادة زاوية العرض">↺</button>
+              </div>
+            </div>
+            <div class="stage-canvas" id="stageCanvas">
+              <div class="scanline"></div>
+              <div class="axis-label axis-x">X</div><div class="axis-label axis-y">Y</div>
+              <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+              <div class="model-wrap" id="modelWrap">
+                <div class="model-shadow"></div>
+                <div class="model-shell" id="modelShell">
+                  <svg id="heartSvg" viewBox="0 0 520 470" role="img" aria-label="نموذج قلب تفاعلي">
+                    <defs>
+                      <filter id="softGlow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                      <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fb7185"/><stop offset=".55" stop-color="#c2415c"/><stop offset="1" stop-color="#6f2544"/></linearGradient>
+                      <linearGradient id="heartGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9aa9"/><stop offset="1" stop-color="#7f2e52"/></linearGradient>
+                      <linearGradient id="vesselGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fb7185"/><stop offset="1" stop-color="#7c294b"/></linearGradient>
+                      <radialGradient id="chamberGrad"><stop offset="0" stop-color="#2b233b"/><stop offset=".8" stop-color="#11182b"/><stop offset="1" stop-color="#070d19"/></radialGradient>
+                    </defs>
+                    <g id="vesselLayer"></g><g id="heartLayer"></g><g id="flowLayer"></g><g id="labelLayer"></g>
+                  </svg>
+                </div>
+              </div>
+              <div class="stage-caption"><span class="crosshair"></span><span id="stageCaption">قلب الضفدع · ثلاث حجرات</span></div>
+              <div class="drag-hint"><span class="mouse-icon">↔</span> اسحب للدوران</div>
+              <div class="internal-toggle"><span>كشف الحجرات</span><button class="toggle" id="internalToggle" role="switch" aria-checked="false"><span></span></button></div>
+            </div>
+            <div class="stage-footer">
+              <div class="legend"><span><i class="legend-dot oxygen"></i>دم مؤكسج</span><span><i class="legend-dot deoxygen"></i>دم غير مؤكسج</span></div>
+              <div class="coordinate-readout"><span>زاوية العرض</span><b id="rotationReadout">00° / 00°</b></div>
+            </div>
+          </div>
+
+          <aside class="inspector-column">
+            <div class="panel inspector-panel">
+              <div class="panel-heading"><div><span class="section-index">02 /</span><h2>المفتش</h2></div><span class="signal-bars"><i></i><i></i><i></i></span></div>
+              <div class="inspector-intro"><span class="target-ring">+</span><div><span class="muted-label">الجزء المحدد</span><h3 id="partTitle">الأذين</h3></div></div>
+              <p id="partDescription">حجرة تستقبل الدم قبل أن ينتقل إلى البطين. انقر على أي جزء مضيء في النموذج لتبديل الشرح.</p>
+              <div class="part-meta"><span id="partType">حجرة استقبال</span><span class="meta-line"></span><span id="partFlow">مسار الدم</span></div>
+              <button class="text-action" id="focusPart">تحديد الجزء في النموذج <span>←</span></button>
+            </div>
+
+            <div class="panel pump-panel">
+              <div class="pump-top"><div><span class="section-index">03 /</span><h2>المحاكاة</h2></div><span id="simulationState" class="state-label">متوقفة</span></div>
+              <div class="pump-visual"><div class="pulse-ring ring-one"></div><div class="pulse-ring ring-two"></div><span class="pump-heart">♥</span><span class="bpm" id="bpmValue">72 <small>نبضة/د</small></span></div>
+              <button class="pump-button" id="pumpButton"><span class="pump-icon">▶</span><span id="pumpButtonText">ابدأ الضخ</span><kbd>Space</kbd></button>
+              <div class="speed-row"><span>سرعة العرض</span><input id="speedRange" type="range" min="0.6" max="1.8" value="1" step="0.1" /><span id="speedValue">1.0×</span></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="flow-section panel">
+          <div class="panel-heading flow-heading"><div><span class="section-index">04 /</span><h2>رحلة الدم</h2><p>المسار التقريبي في قلب <strong id="flowAnimal">الضفدع</strong></p></div><div class="flow-live"><span class="live-dot"></span><span>تتبع مباشر</span></div></div>
+          <div class="flow-track" id="flowTrack"></div>
+        </section>
+
+        <section class="comparison-section panel">
+          <div class="panel-heading comparison-heading"><div><span class="section-index">05 /</span><h2>جدول المقارنة</h2><p>نظرة واحدة على اختلاف البنية والوظيفة</p></div><span class="comparison-mark">BIO / 03</span></div>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead><tr><th>وجه المقارنة</th><th><span class="table-animal-dot frog-dot"></span>الضفدع</th><th><span class="table-animal-dot croc-dot"></span>التمساح</th></tr></thead>
+              <tbody>
+                <tr><th>عدد الحجرات</th><td>ثلاث حجرات</td><td>أربع حجرات</td></tr>
+                <tr><th>الأذينان</th><td>أذينان</td><td>أذينان</td></tr>
+                <tr><th>البطين</th><td>بطين واحد</td><td>بطينان</td></tr>
+                <tr><th>نوع الدورة</th><td>مزدوجة غير مكتملة</td><td>مزدوجة مكتملة</td></tr>
+                <tr><th>مكان تبادل الغازات</th><td>الرئتان والجلد</td><td>الرئتان</td></tr>
+                <tr><th>اختلاط الدم</th><td><span class="table-pill mid">قد يحدث جزئيًا</span></td><td><span class="table-pill clear">منفصل غالبًا</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>مختبر القلوب · تجربة تعليمية تفاعلية</span><span>اسحب · انقر · راقب</span></footer>
+    </div>
+    <script>
+const species = {
+  fish: {
+    name: 'السمكة', code: 'F-02', caption: 'قلب السمكة · منظر مبسط للحجرتين', color: '#7dd3fc', bpm: 72,
+    stats: { chambers: 'حجرتان', atria: 'أذين واحد', ventricle: 'بطين واحد', cycle: 'مفردة', exchange: 'الخياشيم', mixing: 'لا يوجد' },
+    parts: {
+      atrium: { title: 'الأذين', type: 'حجرة استقبال', flow: 'دم غير مؤكسج', description: 'حجرة تستقبل الدم العائد من الجسم قبل أن ينتقل إلى البطين. في قلب السمكة يوجد أذين واحد.' },
+      ventricle: { title: 'البطين', type: 'حجرة دفع', flow: 'إلى الخياشيم', description: 'العضلة الأقوى في القلب؛ تدفع الدم غير المؤكسج باتجاه الخياشيم ليحصل على الأكسجين.' },
+      gills: { title: 'الخياشيم', type: 'تبادل غازات', flow: 'إلى الجسم', description: 'هنا يلتقط الدم الأكسجين من الماء ويطرح ثاني أكسيد الكربون، ثم يتجه إلى بقية الجسم.' },
+      vessel: { title: 'الأوعية الدموية', type: 'مسار النقل', flow: 'دورة مفردة', description: 'شبكة تحمل الدم في مسار واحد: قلب ← خياشيم ← جسم ← قلب.' }
+    },
+    heart: `<g class="heart-group"><path class="external-vessel heart-part" data-part="vessel" d="M228 105 C205 59 180 55 164 76 C151 94 169 111 187 127 L214 151"/><path class="external-vessel vessel-a heart-part" data-part="vessel" d="M282 108 C301 71 338 63 350 85 C361 104 338 120 315 135 L296 154"/><path class="heart-main heart-part" data-part="ventricle" fill="url(#heartGrad)" stroke="#ff9aaa" stroke-width="2.4" d="M190 144 C198 111 226 101 257 118 C284 98 320 112 330 145 C344 190 325 280 298 342 C283 376 261 402 246 410 C226 399 202 377 189 344 C164 281 158 191 190 144 Z"/><path class="heart-part" data-part="atrium" fill="url(#heartGrad2)" stroke="#ffb5be" stroke-width="2" d="M184 133 C196 107 223 107 247 128 L250 198 C217 202 188 187 177 159 C174 150 177 141 184 133Z"/><path class="chamber" d="M193 145 C210 130 228 141 234 160 L232 183 C215 178 201 169 193 145Z"/><path class="chamber" d="M262 174 C285 157 312 170 314 197 C315 245 298 299 269 343 C245 314 239 258 243 216 C246 193 250 181 262 174Z"/><path class="heart-part" data-part="gills" fill="#173c5b" stroke="#7dd3fc" stroke-width="2" d="M340 86 C358 75 379 84 385 100 L379 137 C361 143 343 131 336 114Z"/><path class="chamber-label" d="M210 157"/><path class="chamber-label" d="M277 229"/></g>`
+  },
+  frog: {
+    name: 'الضفدع', code: 'A-07', caption: 'قلب الضفدع · ثلاث حجرات ومساران', color: '#7ce1c3', bpm: 64,
+    stats: { chambers: 'ثلاث حجرات', atria: 'أذينان', ventricle: 'بطين واحد', cycle: 'مزدوجة غير مكتملة', exchange: 'الرئتان والجلد', mixing: 'قد يحدث جزئيًا' },
+    parts: {
+      rightAtrium: { title: 'الأذين الأيمن', type: 'حجرة استقبال', flow: 'دم غير مؤكسج', description: 'يستقبل الدم العائد من الجسم، وهو غني بثاني أكسيد الكربون وقليل الأكسجين.' },
+      leftAtrium: { title: 'الأذين الأيسر', type: 'حجرة استقبال', flow: 'دم مؤكسج', description: 'يستقبل الدم العائد من الرئتين والجلد بعد تبادل الغازات.' },
+      ventricle: { title: 'البطين المشترك', type: 'حجرة دفع', flow: 'مساران', description: 'بطين واحد يدفع الدم إلى الرئتين والجلد وإلى الجسم. قد يحدث اختلاط جزئي داخله.' },
+      lung: { title: 'الرئتان والجلد', type: 'تبادل غازات', flow: 'الأكسجين يدخل', description: 'يستخدم الضفدع الرئتين والجلد معًا لتبادل الغازات، لذلك يبقى جلده رطبًا.' }
+    },
+    heart: `<g class="heart-group"><path class="external-vessel vessel-a heart-part" data-part="lung" d="M224 115 C210 82 177 71 161 93 C146 114 166 132 191 148"/><path class="external-vessel vessel-a heart-part" data-part="lung" d="M292 112 C318 77 352 77 365 99 C378 119 353 137 328 150"/><path class="heart-main heart-part" data-part="ventricle" fill="url(#heartGrad)" stroke="#ff9aaa" stroke-width="2.5" d="M201 145 C208 112 237 100 260 120 C286 99 318 115 327 147 C342 205 322 294 289 362 C278 386 264 401 249 411 C229 397 208 376 195 344 C171 281 169 195 201 145Z"/><path class="heart-part" data-part="rightAtrium" fill="#8f3a58" stroke="#ffb5be" stroke-width="2" d="M192 132 C194 104 222 101 248 126 L253 199 C221 199 194 182 184 153 C181 145 184 137 192 132Z"/><path class="heart-part" data-part="leftAtrium" fill="#bc5369" stroke="#ffb5be" stroke-width="2" d="M272 126 C296 102 327 111 331 140 L319 199 C292 201 265 189 259 164 C257 149 260 136 272 126Z"/><path class="chamber" d="M199 143 C214 128 235 139 239 160 L239 182 C220 177 207 167 199 143Z"/><path class="chamber" d="M281 143 C298 129 316 142 315 164 L308 181 C291 180 278 171 272 154Z"/><path class="chamber" d="M229 202 C256 183 289 191 300 219 C306 260 286 313 256 359 C235 323 222 267 229 202Z"/><path class="heart-part" data-part="lung" fill="#204a51" stroke="#7ce1c3" stroke-width="2" d="M158 91 C139 86 126 104 131 123 C136 140 155 143 169 132 L176 107Z"/><path class="heart-part" data-part="lung" fill="#204a51" stroke="#7ce1c3" stroke-width="2" d="M360 91 C379 86 392 104 387 123 C382 140 363 143 349 132 L342 107Z"/></g>`
+  },
+  crocodile: {
+    name: 'التمساح', code: 'C-11', caption: 'قلب التمساح · أربع حجرات مكتملة', color: '#ffae87', bpm: 38,
+    stats: { chambers: 'أربع حجرات', atria: 'أذينان', ventricle: 'بطينان', cycle: 'مزدوجة مكتملة', exchange: 'الرئتان', mixing: 'منفصل غالبًا' },
+    parts: {
+      rightAtrium: { title: 'الأذين الأيمن', type: 'حجرة استقبال', flow: 'دم غير مؤكسج', description: 'يستقبل الدم غير المؤكسج من الجسم ويدفعه إلى البطين الأيمن.' },
+      leftAtrium: { title: 'الأذين الأيسر', type: 'حجرة استقبال', flow: 'دم مؤكسج', description: 'يستقبل الدم الغني بالأكسجين من الرئتين قبل دخوله البطين الأيسر.' },
+      rightVentricle: { title: 'البطين الأيمن', type: 'حجرة دفع', flow: 'إلى الرئتين', description: 'يدفع الدم غير المؤكسج نحو الرئتين، مع فصل أوضح عن المسار المؤكسج.' },
+      leftVentricle: { title: 'البطين الأيسر', type: 'حجرة دفع', flow: 'إلى الجسم', description: 'يضخ الدم المؤكسج إلى الجسم بقوة. يفصل الحاجز بينه وبين البطين الأيمن.' },
+      lung: { title: 'الرئتان', type: 'تبادل غازات', flow: 'أكسجة الدم', description: 'تتم أكسجة الدم في الرئتين قبل عودته إلى الجانب الأيسر من القلب.' }
+    },
+    heart: `<g class="heart-group"><path class="external-vessel vessel-a heart-part" data-part="lung" d="M225 113 C203 76 170 72 155 94 C141 115 167 135 194 151"/><path class="external-vessel vessel-a heart-part" data-part="lung" d="M297 112 C322 75 359 78 371 102 C383 126 357 143 331 153"/><path class="heart-main heart-part" data-part="rightVentricle" fill="url(#heartGrad)" stroke="#ff9aaa" stroke-width="2.4" d="M198 147 C206 114 235 102 257 121 C283 101 316 114 326 149 C342 207 321 301 288 365 C276 389 264 403 249 412 C227 398 206 376 193 344 C169 283 169 195 198 147Z"/><path class="heart-part" data-part="rightAtrium" fill="#8f3a58" stroke="#ffb5be" stroke-width="2" d="M190 131 C193 105 221 101 245 124 L248 193 C222 195 195 181 183 153 C180 144 183 136 190 131Z"/><path class="heart-part" data-part="leftAtrium" fill="#bc5369" stroke="#ffb5be" stroke-width="2" d="M270 123 C297 101 326 111 332 139 L321 193 C294 196 267 182 260 157 C258 145 261 132 270 123Z"/><path class="chamber" d="M198 143 C215 128 235 138 238 158 L237 178 C218 175 205 165 198 143Z"/><path class="chamber" d="M281 138 C298 126 316 139 316 160 L308 179 C290 177 278 166 273 150Z"/><path class="heart-part" data-part="rightVentricle" fill="#78324e" stroke="#ffb5be" stroke-width="2" d="M205 205 C218 185 243 183 255 204 L254 350 C237 326 224 281 220 242Z"/><path class="heart-part" data-part="leftVentricle" fill="#ad435e" stroke="#ffb5be" stroke-width="2" d="M263 204 C276 183 300 188 307 213 C311 265 292 323 268 361 C256 320 253 251 263 204Z"/><path class="heart-part" data-part="lung" fill="#38534a" stroke="#ffae87" stroke-width="2" d="M151 91 C132 87 121 104 127 123 C132 140 151 143 166 131 L174 108Z"/><path class="heart-part" data-part="lung" fill="#38534a" stroke="#ffae87" stroke-width="2" d="M365 92 C384 88 395 105 389 123 C384 140 365 143 350 131 L342 108Z"/></g>`
+  }
+};
+
+const state = { animal: 'frog', selectedPart: 'rightAtrium', pumping: false, internal: false, speed: 1, rx: 0, ry: 0, dragging: false, lastX: 0, lastY: 0, phase: 0 };
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+function renderAnimal(animalKey) {
+  const animal = species[animalKey];
+  state.animal = animalKey;
+  state.selectedPart = Object.keys(animal.parts)[0];
+  $('#heartLayer').innerHTML = animal.heart;
+  $('#vesselLayer').innerHTML = '';
+  $('#flowLayer').innerHTML = '';
+  $('#labelLayer').innerHTML = '';
+  $('#sampleCode').textContent = animal.code;
+  $('#stageCaption').textContent = animal.caption;
+  $('#flowAnimal').textContent = animal.name;
+  $('#bpmValue').innerHTML = `${animal.bpm} <small>نبضة/د</small>`;
+  document.documentElement.style.setProperty('--species-color', animal.color);
+  $$('.animal-tab').forEach(tab => { const active = tab.dataset.animal === animalKey; tab.classList.toggle('active', active); tab.setAttribute('aria-selected', String(active)); });
+  bindParts();
+  selectPart(state.selectedPart);
+  renderFlow();
+  createBloodParticles();
+  updateHeartVisibility();
+}
+
+function bindParts() {
+  $$('.heart-part').forEach(part => part.addEventListener('click', (event) => { event.stopPropagation(); selectPart(part.dataset.part); }));
+}
+
+function selectPart(partKey) {
+  const animal = species[state.animal];
+  if (!animal.parts[partKey]) partKey = Object.keys(animal.parts)[0];
+  state.selectedPart = partKey;
+  $$('.heart-part').forEach(part => part.classList.toggle('selected', part.dataset.part === partKey));
+  const part = animal.parts[partKey];
+  $('#partTitle').textContent = part.title;
+  $('#partDescription').textContent = part.description;
+  $('#partType').textContent = part.type;
+  $('#partFlow').textContent = part.flow;
+  $('#focusPart').dataset.part = partKey;
+}
+
+function updateHeartVisibility() {
+  $$('.chamber').forEach(chamber => { chamber.style.opacity = state.internal ? '1' : '.08'; });
+  $('#modeBadge').innerHTML = `<span class="badge-dot"></span>${state.internal ? 'منظر داخلي' : 'منظر خارجي'}`;
+  $('#internalToggle').classList.toggle('on', state.internal);
+  $('#internalToggle').setAttribute('aria-checked', String(state.internal));
+}
+
+function renderFlow() {
+  const animal = species[state.animal];
+  const steps = state.animal === 'fish'
+    ? [['01', 'الجسم', 'دم غير مؤكسج'], ['02', 'الأذين', 'استقبال'], ['03', 'البطين', 'دفع'], ['04', 'الخياشيم', 'تبادل غازات'], ['05', 'الجسم', 'دم مؤكسج']]
+    : state.animal === 'frog'
+      ? [['01', 'الجسم', 'دم غير مؤكسج'], ['02', 'الأذينان', 'استقبال'], ['03', 'البطين', 'توزيع'], ['04', 'الرئتان والجلد', 'تبادل غازات'], ['05', 'الجسم', 'دم مؤكسج']]
+      : [['01', 'الجسم', 'دم غير مؤكسج'], ['02', 'الأذين الأيمن', 'استقبال'], ['03', 'البطين الأيمن', 'إلى الرئتين'], ['04', 'الرئتان', 'أكسجة'], ['05', 'الأذين الأيسر', 'عودة'], ['06', 'البطين الأيسر', 'إلى الجسم']];
+  $('#flowTrack').innerHTML = steps.map((step, index) => `<div class="flow-node ${index === 0 ? 'active' : ''}"><div class="node-marker">${step[0]}</div><div class="node-title">${step[1]}</div><div class="node-sub">${step[2]}</div></div>`).join('');
+}
+
+function createBloodParticles() {
+  const layer = $('#flowLayer');
+  const paths = state.animal === 'fish'
+    ? [{ d: 'M204 157 C250 180 285 211 286 275 C286 316 267 344 249 375 C222 331 204 262 201 202', color: '#5cbdff', offset: 0 }, { d: 'M250 375 C279 356 313 295 321 226 C327 184 320 151 303 116', color: '#ffae87', offset: .4 }]
+    : [{ d: 'M201 154 C226 177 245 212 242 274 C241 311 247 344 251 376', color: '#5cbdff', offset: 0 }, { d: 'M297 151 C276 177 271 205 271 260 C270 307 260 344 249 376', color: '#ffae87', offset: .5 }];
+  layer.innerHTML = paths.map((path, i) => `<path class="flow-path ${path.color === '#ffae87' ? 'oxygen' : 'deoxygen'}" d="${path.d}"/><g class="particle-group" data-path-index="${i}" data-offset="${path.offset}">${Array.from({ length: 4 }, (_, j) => `<circle class="blood-particle" r="${j % 2 ? 4 : 5}" fill="${path.color}" opacity="${.68 + j * .07}" data-particle="${j}"/>`).join('')}</g>`).join('');
+}
+
+function updateParticles() {
+  const groups = $$('.particle-group');
+  groups.forEach(group => {
+    const index = Number(group.dataset.pathIndex);
+    const offset = Number(group.dataset.offset);
+    const path = group.previousElementSibling;
+    const length = path.getTotalLength ? path.getTotalLength() : 1;
+    $$('.blood-particle', group).forEach((particle, i) => {
+      const distance = ((state.phase * (state.pumping ? state.speed : .06) + offset) + i / 4) % 1;
+      const point = path.getPointAtLength(distance * length);
+      particle.setAttribute('cx', point.x); particle.setAttribute('cy', point.y);
+      particle.style.opacity = state.pumping ? String(.72 + i * .06) : '.26';
+    });
+  });
+  state.phase += .0035;
+  requestAnimationFrame(updateParticles);
+}
+
+function setPumping(value) {
+  state.pumping = value;
+  document.body.classList.toggle('pumping', value);
+  $('#pumpButton').classList.toggle('running', value);
+  $('#pumpButtonText').textContent = value ? 'إيقاف الضخ' : 'ابدأ الضخ';
+  $('#pumpButton .pump-icon').textContent = value ? 'Ⅱ' : '▶';
+  $('#simulationState').textContent = value ? 'تعمل الآن' : 'متوقفة';
+  $('#simulationState').classList.toggle('running', value);
+  $('#flowTrack').classList.toggle('flow-running', value);
+}
+
+function updateRotation() {
+  state.rx = clamp(state.rx, -24, 24); state.ry = clamp(state.ry, -33, 33);
+  $('#modelShell').style.setProperty('--rx', `${state.rx}deg`); $('#modelShell').style.setProperty('--ry', `${state.ry}deg`); $('#modelShell').style.transform = `rotateX(${state.rx}deg) rotateY(${state.ry}deg)`;
+  $('#rotationReadout').textContent = `${String(Math.round(state.ry)).padStart(2, '0')}° / ${String(Math.round(state.rx)).padStart(2, '0')}°`;
+}
+
+$$('.animal-tab').forEach(tab => tab.addEventListener('click', () => renderAnimal(tab.dataset.animal)));
+$('#internalToggle').addEventListener('click', () => { state.internal = !state.internal; updateHeartVisibility(); });
+$('#pumpButton').addEventListener('click', () => setPumping(!state.pumping));
+$('#speedRange').addEventListener('input', event => { state.speed = Number(event.target.value); $('#speedValue').textContent = `${state.speed.toFixed(1)}×`; });
+$('#resetView').addEventListener('click', () => { state.rx = 0; state.ry = 0; updateRotation(); });
+$('#focusPart').addEventListener('click', () => { const part = $(`[data-part="${$('#focusPart').dataset.part}"]`); if (part) { part.scrollIntoView({ block: 'center', behavior: 'smooth' }); part.classList.add('selected'); setTimeout(() => part.classList.remove('selected'), 1100); } });
+$('#stageCanvas').addEventListener('pointerdown', event => { if (event.target.closest('button, input')) return; state.dragging = true; state.lastX = event.clientX; state.lastY = event.clientY; $('#stageCanvas').setPointerCapture(event.pointerId); });
+$('#stageCanvas').addEventListener('pointermove', event => { if (!state.dragging) return; state.ry += (event.clientX - state.lastX) * .32; state.rx -= (event.clientY - state.lastY) * .2; state.lastX = event.clientX; state.lastY = event.clientY; updateRotation(); });
+['pointerup', 'pointercancel', 'pointerleave'].forEach(name => $('#stageCanvas').addEventListener(name, () => { state.dragging = false; }));
+document.addEventListener('keydown', event => { if (event.code === 'Space' && event.target.tagName !== 'INPUT') { event.preventDefault(); setPumping(!state.pumping); } });
+
+renderAnimal('frog');
+createBloodParticles();
+updateParticles();
+
+</script>
+  </body>
+</html>
